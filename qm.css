@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #cab47c;
@@ -11,6 +12,8 @@ body {
     padding: 0;
     width: 100vw;
 }
+
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -18,135 +21,172 @@ header {
     padding: 20px;
     background-color: #346038;
     box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+    width: 100%;
+    flex-wrap: wrap; /* Ajusta os itens do header em telas menores */
 }
+
 .menu {
     display: flex;
-    gap: 0px;
-    margin-left: 1000px;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que o menu se reorganize em uma coluna em telas menores */
 }
+
 .menu-item {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 .menu-item:hover {
     color: #346038;
 }
-.name{
+
+.name {
     display: flex;
-    gap: 0px;
+    gap: 10px;
 }
-.site-name{
+
+.site-name {
     text-decoration: none;
     color: #cab47c;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 1.5rem;
     transition: color 0.3s;
 }
+
+.site-name:hover {
+    color: #28502f;
+}
+
+/* Caixa de Informações */
 .info-box {
     background-color: #346038;
-    padding: 7 0px;
-    margin: 20px 0;
+    padding: 1.5rem;
+    margin: 2rem auto;
     text-align: center;
     border-radius: 20px;
-    width: 800px;
-    height: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
+    width: 80%;
+    max-width: 800px;
+    transform: translate(0, -10%);
 }
+
 .info-box h1 {
-    font-size: 50px;
-    font-weight: 50px;
+    font-size: 3rem;
+    font-weight: 600;
     color: #cab47c;
-    margin-bottom: 60px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 40px;
-    padding-top: 40px;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     text-align: center;
     font-family: Inria Serif;
 }
-hr{
-    border: 1px solid #cab47c; /* Altere a cor conforme necessário */
-    margin: 40px 0; /* Espaçamento acima e abaixo da linha */
-    width: 50%; /* Altere a porcentagem conforme necessário */
-    margin-left: auto; /* Alinha a linha ao centro */
-    margin-right: auto; /* Alinha a linha ao centro */
-    
+
+hr {
+    border: 1px solid #cab47c;
+    margin: 2rem 0;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 .info-box p {
-    font-size: 20px;
-    font-weight: 10px;
+    font-size: 1.25rem;
     color: #cab47c;
-    margin-bottom: 10px;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding-top: 30px;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     font-family: Rosarivo;
-    padding-top: 20px;
 }
+
+/* Footer */
 footer {
     background-color: #346038;
     color: #cab47c;
     padding: 20px;
     text-align: center;
-    position: relative;
-    bottom: 0;
-    top: 500px;
     width: 100%;
 }
+
 .footer-content p {
-    font-size: 24px;
-    margin-bottom: 0;
-}
-.footer-content p {
-    font-size: 16px;
-    margin-bottom: 0;
+    font-size: 1rem;
 }
 
-@media(max-width:768px) {
-    .menu {
-        flex-direction: column; /* Muda a direção do menu em telas menores */
-        align-items: center; /* Centraliza os itens do menu */
-        margin-left: 0; /* Remove a margem esquerda */
-    }
-    .menu {
-        flex-direction: column; /* Muda a direção do menu em telas menores */
-        align-items: center; /* Centraliza os itens do menu */
-        margin-left: 0; /* Remove a margem esquerda */
-    }
-    .info-box {
-        padding: 15px; /* Menos padding em telas menores */
-    }
-    .info-box h1 {
-        font-size: 2rem; /* Tamanho reduzido */
-        margin: 20px 30px; /* Menos margem */
-    }
-    hr {
-        width: 80%; /* Aumenta a largura da linha em telas menores */
-    }
-    .info-box p {
-        font-size: 1rem; /* Tamanho reduzido */
-        margin: 10px 20px; /* Menos margem */
-    }
-    footer {
-        padding: 10px; /* Menos padding em telas menores */
-    }
-}
+/* Media Queries */
 
-@media(max-width:480px) {
+/* Para telas menores (tablet) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .site-name {
-        font-size: 1rem; /* Tamanho ainda menor */
+        font-size: 1.2rem;
     }
+
+    .info-box {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
     .info-box h1 {
-        font-size: 1.5rem; /* Tamanho reduzido */
+        font-size: 2rem;
+        margin: 1.5rem;
     }
+
+    hr {
+        width: 80%;
+    }
+
     .info-box p {
-        font-size: 0.9rem; /* Tamanho reduzido */
+        font-size: 1rem;
+        margin: 1rem;
     }
-    .footer-content p {
-        font-size: 0.8rem; /* Tamanho reduzido */
+
+    footer {
+        padding: 15px;
     }
 }
+
+/* Para telas pequenas (celular) */
+@media (max-width: 480px) {
+    .site-name {
+        font-size: 1rem;
+    }
+
+    .info-box h1 {
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+
+    .info-box p {
+        font-size: 0.9rem;
+        margin: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    .info-box {
+        width: 100%;
+        margin: 1rem;
+    }
+}
+
