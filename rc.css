@@ -1,3 +1,4 @@
+/* Reset de margens e bordas */
 * {
     margin: 0;
     padding: 0;
@@ -8,18 +9,38 @@ body {
     font-family: Arial, sans-serif;
     background-color: #cab47c;
     color: #333;
+    overflow-x: hidden;
     margin: 0;
+    padding: 0;
 }
 
+/* Estilos do Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: #346038;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
     width: 100%;
-    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas pequenas */
+    flex-wrap: wrap;
+}
+
+.name {
+    display: flex;
+    gap: 10px;
+}
+
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.site-name:hover {
+    color: #28502f;
 }
 
 .menu {
@@ -33,60 +54,199 @@ header {
     color: #cab47c;
     font-weight: bold;
     transition: color 0.3s;
-    font-size: 1.5rem;
-    margin-right: 10px;
 }
 
 .menu-item:hover {
     color: #346038;
 }
 
-.name {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Conteúdo principal */
+.container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
 }
 
-.site-name {
-    text-decoration: none;
+h2 {
+    text-align: center;
+    color: #391C14;
+    font-family: Roboto;
+    margin-top: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+table th {
+    background-color: #653F26;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #653F26;
+    padding: 12px;
+    text-align: center;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Footer fixo e responsivo */
+footer {
+    background-color: #346038;
     color: #cab47c;
-    font-weight: bold;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}     
-
-.site-name:hover {
-    color: #346038; 
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
 }
 
-/* Ajustes para telas menores */
+.footer-content p {
+    font-size: 1rem;
+}
+
+.container {
+    margin-bottom: 80px;
+}
+
+/* Seção Tutorial */
+.tutorial {
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.tutorial h1 {
+    font-family: Roboto;
+    color: #391C14;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.tutorial h2 {
+    font-family: Roboto;
+    color: #391C14;
+    font-size: 1.5rem;
+    margin-top: 25px;
+}
+
+.tutorial h2 .destaque {
+    color: #8E2103;  
+}
+
+/* Caixa de Informações */
+.info-box {
+    background-color: #346038;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
+}
+
+.info-box ul {
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+.info-box li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #cab47c;
+}
+
+/* Media Query para dispositivos menores */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Alinha itens em coluna */
+        flex-direction: column;
         align-items: center;
         padding: 10px;
     }
 
     .menu {
-        justify-content: center; /* Centraliza itens */
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
     }
 
     .menu-item {
-        font-size: 1.2rem;
+        padding: 10px 0;
+        font-size: 0.9rem;
     }
 
     .site-name {
         font-size: 1.2rem;
-        text-align: center;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .tutorial h1 {
+        font-size: 1.8rem;
+    }
+
+    .tutorial h2 {
+        font-size: 1.2rem;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+
+    .info-box li {
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    .menu-item {
+    .site-name {
         font-size: 1rem;
     }
 
-    .site-name {
+    .menu-item {
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .tutorial h1 {
+        font-size: 1.5rem;
+    }
+
+    .tutorial h2 {
         font-size: 1rem;
+    }
+
+    .info-box {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .info-box li {
+        font-size: 0.8rem;
     }
 }
