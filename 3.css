@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+    width: 100%;
+    flex-wrap: wrap; /* Para ajustar os itens no header em telas menores */
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que o menu ajuste em uma coluna em telas menores */
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #346038;
+}
+
+.name {
+    display: flex;
+    gap: 10px;
+}
+
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.site-name:hover {
+    color: #28502f;
+}
+
+/* Seção de Envio de Imagem (Comentado) */
+.enviar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.envio-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #346038;
+    color: #cab47c;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    justify-content: center;
+    font-size: 1rem;
+    transform: translate(0, -500px);
+}
+
+.envio-btn:hover {
+    background-color: #28502f;
+}
+
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content p {
+    font-size: 1rem;
+}
+
+/* Seção Tutorial */
+.tutorial {
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center; /* Centralizar o conteúdo */
+}
+
+.tutorial h1 {
+    font-family: Roboto;
+    color: #391C14;
+    font-size: 80px;
+    font-weight: 1.5rem;
+    margin-top: 20px;
+}
+
+.tutorial h2 {
+    font-family: Roboto;
+    color: #391C14;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.tutorial h2 .destaque {
+    color: #8E2103;  
+}
+
+/* Caixa de Informações */
+.info-box {
+    background-color: #346038;
+    padding: 7px 0;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 20px;
+    width: 700px;
+    height: 400px;
+    transform: translate(50%, -130%);
+}
+
+.info-box ul {
+    list-style-type: none;  /* Remove os marcadores padrão da lista */
+    padding-left: 0;  /* Remove o padding à esquerda */
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.info-box li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #cab47c;
+}
+
+/* Media Query para telas menores (tablet) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .site-name {
+        font-size: 1.2rem;
+    }
+
+    .envio-btn {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Ajustando os títulos do tutorial para telas menores */
+    .tutorial h1 {
+        font-size: 40px;
+    }
+
+    .tutorial h2 {
+        font-size: 24px;
+    }
+
+    .info-box {
+        width: 90%;
+        height: auto;
+        transform: translate(0, -100%);  /* Mover mais para cima */
+        margin: 10px auto; /* Centralizar e reduzir a margem */
+    }
+
+    .info-box ul {
+        padding: 30px 20px;
+    }
+
+    .info-box li {
+        font-size: 18px;
+    }
+
+    /* Movendo o botão de envio mais para cima */
+    .envio-btn {
+        margin-top: 20px; /* Garantir que o botão tenha mais espaço no topo */
+    }
+}
+
+/* Media Query para telas muito pequenas (celular) */
+@media (max-width: 450px) {
+    .site-name {
+        font-size: 1rem;
+    }
+
+    .envio-btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+        transform: translate(0, -600px);
+    }
+
+    /* Ajustando os títulos para uma tela ainda menor */
+    .tutorial h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .tutorial h2 {
+        font-size: 20px;
+    }
+
+    .info-box {
+        width: 100%;
+        height: auto;
+        transform: none;
+        margin: 0 10px; /* Margem menor */
+        padding: 20px 10px; /* Mais espaçamento dentro da caixa */
+        transform: translate(0, -700px);
+    }
+
+    .info-box ul {
+        padding: 20px;
+    }
+
+    .info-box li {
+        font-size: 16px;
+    }
+}
+
+
+
+

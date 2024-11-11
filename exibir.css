@@ -1,0 +1,262 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+    width: 100%; 
+}
+
+.menu {
+    display: flex;
+    gap: 0px;
+    margin-left: 600px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-right: 100px;
+}
+
+.menu-item:hover {
+    color: #346038;
+}
+
+.name {
+    display: flex;
+}
+
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.site-name:hover {
+    color: #346038;
+}
+
+.passos h1 {
+    font-family: Roboto;
+    color: #181B18;
+    margin-left: 50px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.Passo h2 {
+    font-family: Roboto;
+    color: #181B18;
+    margin-left: 100px;
+    margin-top: 60px;
+    font-size: 1.5rem;
+}
+
+.skin-tone-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+    margin-top: 10px;
+    transform: translate(0, -10px);
+}
+
+.skin-tone-table-scroll {
+    height: 400px; 
+    overflow-y: auto;
+    border: 1px solid #346038; 
+    padding: 1px; 
+}
+
+.skin-tone-table {
+    display: grid;
+    grid-template-columns: repeat(1, 200px); 
+    gap: 0; 
+    border-spacing: 0; 
+    border-collapse: collapse; 
+}
+
+.skin-tone-row {
+    height: 150px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin: 0; 
+    padding: 0; 
+    transition: border-color 0.3s;
+}
+
+.skin-tone-row:hover {
+    border-color: #346038; 
+}
+
+.skin-tone-row.selected {
+    border-color: #ff0000;
+}
+
+.skin-tone-1 { background-color: #8d5524; }
+.skin-tone-2 { background-color: #c68642; }
+.skin-tone-3 { background-color: #e0ac69; }
+.skin-tone-4 { background-color: #f1c27d; }
+.skin-tone-5 { background-color: #ffdbac; }
+.skin-tone-6 { background-color: #7d4f2e; }
+.skin-tone-7 { background-color: #b87333; }
+.skin-tone-8 { background-color: #d8a068; }
+.skin-tone-9 { background-color: #f3c48b; }
+.skin-tone-10 { background-color: #ffedc2; }
+.skin-tone-11 { background-color: #5a3d2b; }
+.skin-tone-12 { background-color: #a67b5b; }
+
+.enviar {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 700px;
+    position: absolute;
+}
+
+.envio-btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #346038;
+    color: #cab47c;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 20px; 
+    width: 90px; 
+    transform: translate(-5%, -10px);
+}
+
+.envio-btn:hover {
+    background-color: #28502f; 
+}
+
+.container {
+    flex: 1;
+}
+
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Faz o footer ser empurrado para o final da tela */
+    flex-shrink: 0; /* Impede que o footer encolha */
+}
+
+.footer-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu-item {
+        font-size: 14px;
+        margin-right: 20px;
+    }
+
+    .site-name {
+        font-size: 20px;
+    }
+
+    .passos h1, .Passo h2 {
+        font-size: 1.5rem;
+    }
+
+    .skin-tone-container {
+        margin-top: 20px;
+    }
+
+    .envio-btn {
+        width: 150px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .menu-item {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .site-name {
+        font-size: 18px;
+    }
+
+    .passos h1, .Passo h2 {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+
+    .skin-tone-container {
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .envio-btn {
+        width: 180px;
+    }
+    footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .passos h1, .Passo h2 {
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+
+    .skin-tone-container {
+        margin-bottom: 30px;
+    }
+
+    .envio-btn {
+        width: 100px;
+    }
+
+    .skin-tone-table {
+        grid-template-columns: repeat(1, 80px); 
+    }
+    footer {
+        padding: 10px;
+    }
+}
+
+   
+ 
+

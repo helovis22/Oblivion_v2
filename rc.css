@@ -1,0 +1,166 @@
+/* Reset de margens e bordas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cab47c;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+/* Estilos do Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #346038;
+    box-shadow: 0 2px 4px rgba(127, 168, 50, 0.1);
+}
+
+/* Menu responsivo */
+.menu {
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-item:hover {
+    color: #346038;
+}
+
+.name {
+    display: flex;
+    gap: 10px;
+}
+
+.site-name {
+    text-decoration: none;
+    color: #cab47c;
+    font-weight: bold;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.site-name:hover {
+    color: #346038;
+}
+
+/* Conteúdo principal */
+.container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+h2 {
+    text-align: center;
+    color: #391C14;
+    font-family: Roboto;
+    margin-top: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+table th {
+    background-color: #653F26;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+table td {
+    border: 1px solid #653F26;
+    padding: 12px;
+    text-align: center;
+}
+
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Footer fixo e responsivo */
+footer {
+    background-color: #346038;
+    color: #cab47c;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer-content p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.container {
+    margin-bottom: 80px; /* Evita que o conteúdo seja sobreposto pelo footer fixo */
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .menu-item {
+        padding: 10px 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .site-name {
+        font-size: 20px;
+    }
+
+    .menu-item {
+        font-size: 14px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+}
