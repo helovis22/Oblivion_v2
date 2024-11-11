@@ -196,6 +196,6 @@ footer {
         width: 100%;
         margin: 1rem;
         margin-top: 20px; /* Ajuste adicional na margem superior */
-        margin-left: -5%; /* Move o container mais para a esquerda */
+        margin-left: 1%; /* Move o container mais para a esquerda */
     }
 }
