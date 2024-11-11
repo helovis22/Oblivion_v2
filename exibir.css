@@ -10,13 +10,11 @@ body {
     background-color: #cab47c;
     color: #333;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh; /* Garante que a altura mínima da página seja 100vh */
 }
 
 .container {
-    flex: 1; /* Isso garante que o conteúdo ocupe o restante da altura da tela */
+    flex: 1; /* Garante que o conteúdo ocupe o restante da altura da tela */
     padding-bottom: 50px; /* Adiciona um pequeno espaço para não sobrepor o footer */
 }
 
@@ -262,7 +260,7 @@ footer {
     
     footer {
         padding: 10px;
-        position: absolute; /* Faz com que o footer seja fixado no final da página */
+        position: fixed; /* Faz com que o footer seja fixado no rodapé */
         bottom: 0; /* Alinha o footer no final */
         left: 0;
         width: 100%; /* Garante que o footer ocupe toda a largura */
