@@ -179,7 +179,10 @@ footer {
         font-size: 1rem;
         padding: 5px;
     }
-
+    table th, table td {
+          padding: 8px;
+          margin-left: 5px;
+    }
     footer p {
         font-size: 0.8rem;
     }
