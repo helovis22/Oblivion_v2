@@ -25,6 +25,7 @@ header {
     width: 100%; /* Certifica que o header ocupa 100% da largura do viewport */
     margin: 0; /* Remove possíveis margens */
     flex-wrap: wrap;
+    box-sizing: border-box; /* Adicionando box-sizing para garantir o cálculo correto */
 }
 
 .name {
@@ -156,10 +157,12 @@ footer {
         width: 100%; /* Certifica que o header ocupa 100% da largura do viewport */
         text-align: center;
         margin: 0;
+        box-sizing: border-box; /* Garantindo box-sizing correto */
     }
 
     .name {
         flex-direction: column;
+        align-items: center;
     }
 
     .site-name {
