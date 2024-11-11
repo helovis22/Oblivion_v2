@@ -193,6 +193,6 @@ footer {
     .info-box {
         width: 100%;
         margin: 1rem;
-        margin-top: 20px; /* Ajuste adicional na margem superior */
+        margin-top: 10px; /* Ajuste adicional na margem superior */
     }
 }
