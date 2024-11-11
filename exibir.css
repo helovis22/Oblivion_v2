@@ -10,13 +10,14 @@ body {
     background-color: #cab47c;
     color: #333;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh; /* Garante que a altura mínima da página seja 100vh */
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo do body verticalmente */
 }
 
+/* O container vai ocupar o espaço disponível entre o header e o footer */
 .container {
-    flex: 1; /* Isso garante que o conteúdo ocupe o restante da altura da tela */
+    flex: 1;
     padding-bottom: 50px; /* Adiciona um pequeno espaço para não sobrepor o footer */
 }
 
@@ -172,6 +173,7 @@ footer {
     flex-shrink: 0; /* Impede que o footer encolha */
 }
 
+/* Footer Content */
 .footer-content p {
     font-size: 1rem;
     margin-bottom: 10px;
@@ -242,29 +244,25 @@ footer {
     }
 }
 
+/* Para telas menores de 480px - Ajustes no footer para ficar fixo no rodapé */
 @media screen and (max-width: 480px) {
-    .passos h1, .Passo h2 {
-        font-size: 1rem;
-        margin-left: 10px;
+    body {
+        display: flex;
+        flex-direction: column; /* Organiza o conteúdo do body verticalmente */
+        min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
     }
 
-    .skin-tone-container {
-        margin-bottom: 30px;
+    .container {
+        flex: 1; /* Faz o container ocupar todo o espaço disponível */
     }
 
-    .envio-btn {
-        width: 100px;
-    }
-
-    .skin-tone-table {
-        grid-template-columns: repeat(1, 80px); 
-    }
-    
     footer {
         padding: 10px;
-        position: absolute; /* Faz com que o footer seja fixado no final da página */
-        bottom: 0; /* Alinha o footer no final */
+        position: fixed; /* Faz com que o footer fique fixo no rodapé */
+        bottom: 0;
         left: 0;
-        width: 100%; /* Garante que o footer ocupe toda a largura */
+        width: 100%;
+        background-color: #346038;
+        color: #cab47c;
     }
 }
