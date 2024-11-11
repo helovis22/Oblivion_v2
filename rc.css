@@ -244,6 +244,7 @@ footer {
     .info-box {
         width: 100%;
         padding: 10px;
+        margin-left: 3%;
     }
 
     .info-box li {
