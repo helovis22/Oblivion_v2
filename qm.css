@@ -14,6 +14,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Garante que o footer vá para o final */
 }
 
 /* Header */
@@ -110,7 +111,7 @@ footer {
     padding: 20px;
     text-align: center;
     width: 100%;
-    margin-top: auto; /* Certifica-se de que o footer ficará no final da página */
+    margin-top: auto; /* Empurra o footer para o final da página */
 }
 
 .footer-content p {
@@ -193,6 +194,6 @@ footer {
     .info-box {
         width: 100%;
         margin: 1rem;
-        margin-top: 10px; /* Ajuste adicional na margem superior */
+        margin-top: 20px; /* Ajuste adicional na margem superior */
     }
 }
