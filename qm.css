@@ -163,6 +163,7 @@ footer {
 }
 
 /* Para telas pequenas (celular) */
+/* Para telas pequenas (celular) */
 @media (max-width: 480px) {
     .site-name {
         font-size: 1rem;
@@ -195,5 +196,6 @@ footer {
         width: 100%;
         margin: 1rem;
         margin-top: 20px; /* Ajuste adicional na margem superior */
+        margin-left: 10%; /* Move o container mais para a esquerda */
     }
 }
